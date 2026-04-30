@@ -580,7 +580,7 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-  nav, .btn-contact { display: none; }
+  nav { display: none; }
   .hamburger { display: flex; }
   .about-block { grid-template-columns: 1fr; gap: 32px; }
   .about-stats { grid-template-columns: repeat(2, 1fr); gap: 14px; }
