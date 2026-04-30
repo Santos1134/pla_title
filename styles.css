@@ -315,7 +315,10 @@ nav { display: flex; gap: 4px; align-items: center; }
 .breadcrumb a { color: var(--gold); }
 
 .page-hero-services {
-  background: url('services.jpg') center center / cover no-repeat;
+  background-image: url('services.jpg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
   position: relative;
 }
 .page-hero-services::before {
@@ -323,9 +326,12 @@ nav { display: flex; gap: 4px; align-items: center; }
   position: absolute;
   inset: 0;
   background: rgba(10, 30, 55, 0.65);
+  z-index: 0;
 }
-.page-hero-services h1,
-.page-hero-services p { position: relative; }
+.page-hero-services .container {
+  position: relative;
+  z-index: 1;
+}
 
 /* ===== SERVICES PAGE ===== */
 .services-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
