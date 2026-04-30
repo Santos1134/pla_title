@@ -455,25 +455,32 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
 .svc-intro h1 { font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 700; color: var(--navy); margin-bottom: 14px; }
 .svc-intro p { color: var(--gray); max-width: 680px; line-height: 1.75; }
 
-.svc-list-section { padding: 48px 0 64px; }
+.svc-list-section { padding: 56px 0 72px; }
 .svc-plain-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 .svc-entry {
   border: 1px solid var(--light-gray);
-  border-radius: 6px;
-  padding: 28px 24px;
+  border-radius: 8px;
+  padding: 32px 28px;
   background: var(--white);
 }
-.svc-icon { margin-bottom: 14px; }
-.svc-icon i { font-size: 1.8rem; color: var(--gold); }
-.svc-entry h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
-.svc-entry p { color: var(--gray); font-size: 0.875rem; line-height: 1.75; }
+.svc-icon { margin-bottom: 16px; line-height: 1; }
+.svc-icon i {
+  font-size: 2rem;
+  color: #E84E1B !important;
+  display: inline-block;
+}
+.svc-entry h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.svc-entry p { color: var(--gray); font-size: 0.875rem; line-height: 1.8; }
 
 @media (max-width: 640px) {
-  .svc-plain-list { grid-template-columns: 1fr; }
+  .svc-list-section { padding: 36px 0 52px; }
+  .svc-plain-list { grid-template-columns: 1fr; gap: 16px; }
+  .svc-entry { padding: 24px 20px; }
+  .svc-icon i { font-size: 1.8rem; color: #E84E1B !important; }
 }
 
 /* ===== SIMPLE FOOTER (services page) ===== */
@@ -541,23 +548,44 @@ footer { background: var(--navy-dark); color: var(--white); padding: 56px 0 0; }
 @media (max-width: 900px) {
   nav, .btn-contact { display: none; }
   .hamburger { display: flex; }
-  .about-block { grid-template-columns: 1fr; gap: 40px; }
-  .about-stats { grid-template-columns: repeat(4, 1fr); }
-  .expertise-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .contact-layout { grid-template-columns: 1fr; gap: 36px; }
+  .about-block { grid-template-columns: 1fr; gap: 32px; }
+  .about-stats { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .expertise-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .segments-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .contact-layout { grid-template-columns: 1fr; gap: 32px; }
   .news-grid { grid-template-columns: repeat(2, 1fr); }
   .values-grid { grid-template-columns: 1fr; }
+  .section { padding: 56px 0; }
+  .page-hero { padding: 64px 0; }
+  .svc-intro { padding: 36px 0 28px; }
+  .svc-list-section { padding: 36px 0 48px; }
+  .svc-plain-list { grid-template-columns: 1fr; gap: 14px; }
+  .svc-entry { padding: 24px 20px; }
 }
+
 @media (max-width: 600px) {
-  .container { padding: 0 20px; }
-  .nav-wrapper { padding: 16px 20px; }
-  .expertise-grid { grid-template-columns: 1fr; }
-  .segments-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .about-stats { grid-template-columns: repeat(2, 1fr); }
+  .container { padding: 0 16px; }
+  .nav-wrapper { padding: 14px 16px; }
+  .hero { padding: 72px 0; }
+  .hero h1 { font-size: 1.7rem; }
+  .hero p { font-size: 0.95rem; }
+  .page-hero { padding: 52px 0; }
+  .page-hero h1 { font-size: 1.5rem; }
+  .section { padding: 44px 0; }
+  .expertise-grid { grid-template-columns: 1fr; gap: 14px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  footer { padding: 36px 0 0; }
+  .footer-grid { padding-bottom: 28px; }
+  .about-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .stat-box { padding: 20px 14px; }
+  .stat-box .num { font-size: 1.8rem; }
   .news-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
-  .job-card { flex-direction: column; align-items: flex-start; }
-  .hero { padding: 80px 0; }
+  .job-card { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .cta-band { padding: 44px 0; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+  .svc-plain-list { gap: 12px; }
+  .svc-entry { padding: 20px 16px; }
+  .svc-icon i { font-size: 1.6rem; }
 }
