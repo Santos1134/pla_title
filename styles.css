@@ -501,10 +501,12 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
 .footer-simple-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
 
 @media (max-width: 900px) {
-  .footer-simple-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .footer-simple-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .footer-simple-col:nth-child(1),
+  .footer-simple-col:nth-child(2) { display: none; }
 }
 @media (max-width: 500px) {
-  .footer-simple-grid { grid-template-columns: 1fr; }
+  .footer-simple-grid { grid-template-columns: 1fr; gap: 20px; }
 }
 
 /* ===== FOOTER ===== */
