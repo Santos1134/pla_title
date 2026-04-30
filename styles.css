@@ -497,26 +497,27 @@ footer {
 }
 .footer-top {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 48px;
   padding-bottom: 36px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   flex-wrap: wrap;
 }
-.footer-brand .logo-name { color: var(--white); font-size: 1.2rem; }
-.footer-contact { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+.footer-top .logo-name { color: var(--white); font-size: 1.2rem; }
+.footer-contact { display: flex; flex-direction: column; gap: 10px; align-items: center; }
 .footer-contact a {
   font-size: 0.875rem;
   color: rgba(255,255,255,0.65);
   transition: color 0.15s;
-  text-align: right;
+  text-align: center;
 }
 .footer-contact a:hover { color: var(--gold); }
 .footer-contact span {
   font-size: 0.875rem;
   color: rgba(255,255,255,0.45);
-  text-align: right;
+  text-align: center;
 }
 .footer-bottom {
   padding: 18px 0;
@@ -525,24 +526,14 @@ footer {
 }
 .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
 
-@media (max-width: 600px) {
-  .footer-top { flex-direction: column; gap: 28px; }
-  .footer-contact { align-items: flex-start; }
-  .footer-contact a, .footer-contact span { text-align: left; }
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   nav, .btn-contact { display: none; }
   .hamburger { display: flex; }
-  .footer-top { grid-template-columns: 1fr; gap: 36px; }
-  .footer-brand > p { max-width: 100%; }
-  .footer-cols { grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .about-block { grid-template-columns: 1fr; gap: 32px; }
   .about-stats { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .expertise-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .segments-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
   .contact-layout { grid-template-columns: 1fr; gap: 32px; }
   .news-grid { grid-template-columns: repeat(2, 1fr); }
   .values-grid { grid-template-columns: 1fr; }
@@ -564,9 +555,7 @@ footer {
   .page-hero h1 { font-size: 1.5rem; }
   .section { padding: 44px 0; }
   .expertise-grid { grid-template-columns: 1fr; gap: 14px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
   footer { padding: 36px 0 0; }
-  .footer-grid { padding-bottom: 28px; }
   .about-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .stat-box { padding: 20px 14px; }
   .stat-box .num { font-size: 1.8rem; }
