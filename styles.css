@@ -523,8 +523,9 @@ footer {
   padding: 18px 0;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
-.footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+.footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.35); margin: 0; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
